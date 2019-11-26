@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import AppHeader from './components/AppHeader/AppHeader'
+import AppHero from './components/AppHero/AppHero'
 
 function App() {
+  const menuItems = [
+    {
+      label: 'CYBERTRUCK',
+      active: true,
+      id: 1
+    },
+    {
+      label: 'MODEL S',
+      active: false,
+      id: 2
+    },
+    {
+      label: 'MODEL 3',
+      active: false,
+      id: 3
+    },
+    {
+      label: 'MODEL X',
+      active: false,
+      id: 4
+    },
+    {
+      label: 'MODEL Y',
+      active: false,
+      id: 5
+    },
+    {
+      label: 'ROADSTER',
+      active: false,
+      id: 6
+    }
+  ]
+
+  const heroContent = {
+    title: 'Tesla Cybertruck',
+    description:
+      'BETTER UTILITY THAN A TRUCK WITH MORE PERFORMANCE THAN A SPORTS CAR'
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <AppHeader links={menuItems} />
+      <AppHero content={heroContent} />
+    </>
+  )
 }
 
-export default App;
+export default App
