@@ -9,7 +9,9 @@ const AppHero = ({ content }) => {
           <div className='col-md-6 content'>
             <h1 className='app-hero__title'>{content.title}</h1>
             <p className='app-hero__description'>{content.description}</p>
-            <a href='#' className='app-hero__btn'>Order now</a>
+            <a href='#' className='app-hero__btn'>
+              Order now
+            </a>
           </div>
         </div>
       </div>
